@@ -2,7 +2,7 @@ import React from "react";
 import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
 
-import Hello from "../components/hello";
+import Hello from "../components/Hello";
 
 let container = null;
 beforeEach(() => {
@@ -16,9 +16,19 @@ afterEach(() => {
   container = null;
 });
 
-test("renders with o without a name", () => {
+it("renders with o without a name", () => {
   act(() => {
     render(<Hello />, container);
   });
   expect(container.textContent).toBe("Hey, stranger");
+
+  act(() => {
+    render(<Hello name="Jenny" />, container);
+  });
+  expect(container.textContent).toBe("Hello, Jenny!");
+
+  act(() => {
+    render(<Hello name="Margaret" />, container);
+  });
+  expect(container.textContent).toBe("Hello, Margaret!");
 });
