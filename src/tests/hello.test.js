@@ -23,6 +23,7 @@ it("renders with o without a name", () => {
   expect(container.textContent).toBe("Hey, stranger");
 
   act(() => {
+<<<<<<< HEAD
     render(<Hello name="Jenny" />, container);
   });
   expect(container.textContent).toBe("Hello, Jenny!");
@@ -31,4 +32,14 @@ it("renders with o without a name", () => {
     render(<Hello name="Margaret" />, container);
   });
   expect(container.textContent).toBe("Hello, Margaret!");
+=======
+    render(<Hello name="Mark" />, container);
+  });
+  expect(container.textContent).toBe("Hello, Mark!");
+  
+  act(() => {
+    render(<Hello name="Jenny" />, container);
+  });
+  expect(container.textContent).toBe("Hello, Jenny!");
+>>>>>>> 80c7143... Add more expects to hello test
 });
