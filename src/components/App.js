@@ -1,11 +1,13 @@
 import Hello from './Hello';
-import Hook from './Hook';
+import HookState from './HookState';
+import HookEffect from './HookEffect';
 
 function App() {
   return (
     <div className="App">
       <Hello />
-      <Hook />
+      <HookState />
+      <HookEffect />
     </div>
   );
 }
