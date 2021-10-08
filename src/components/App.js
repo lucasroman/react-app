@@ -4,9 +4,8 @@ import HookEffect from './HookEffect';
 
 function App() {
   return (
-    <div className="App">
-      <Hello />
-      <HookState />
+    <div>
+      <h1 className="title">Testing React App</h1>
       <HookEffect />
     </div>
   );
