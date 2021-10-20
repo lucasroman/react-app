@@ -28,6 +28,10 @@ it("render user data", async () => {
     })
   );
 
+  await act(async () => {
+    render(<User id="123" />, container);
+  })
+
   expect(container.querySelector("summary").textContent).toBe(fakeUser.name);
 
   expect(container.querySelector("strong").textContent).toBe(fakeUser.age);
