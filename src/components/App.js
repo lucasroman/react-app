@@ -1,5 +1,5 @@
-import Hello from './Hello';
-import HookState from './HookState';
+// import Hello from './Hello';
+// import HookState from './HookState';
 import HookEffect from './HookEffect';
 
 function App() {
