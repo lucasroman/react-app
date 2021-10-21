@@ -3,11 +3,16 @@ import { useState, createContext, useContext } from "react";
 const UserContext = createContext();
 
 export default function Component1() {
-  const [user] = useState("Jesse Hall");
+  // const [firstName] = useState("Jesse");
+  // const [lastName] = useState("Hall");
+  const [user, setUser] = useState({
+    firstName: 'Jhon',
+    lastName: 'Rambo'
+  });
 
   return (
-    <UserContext.Provider value={user}>
-      <h1>{`Hello from first component, user: ${user}`}</h1>
+    <UserContext.Provider value={user.firstName, user.lastName}>
+      <h1>{`Hello from first component, user: ${user.firstName}`}</h1>
       <Component2 />
     </UserContext.Provider>
   );
@@ -18,18 +23,19 @@ function Component2() {
     <>
       <h1>Component 2</h1>
       <Component3 />
-
     </>
   );
 }
 
 function Component3() {
-  const user = useContext(UserContext);
-
+  // Continue here!
+  const firstName = useContext(UserContext).firstName;
+  const lastName = useContext(UserContext);
   return(
     <>
       <h1>Component 3</h1>
-      <h2>{`Hello ${user} again!`}</h2>
+      <h2>{`Hello ${firstName} again!`}</h2>
+      <h3>Your lastname is {lastName}</h3>
     </>
   );
 }
