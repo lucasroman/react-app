@@ -40,3 +40,9 @@ it("render user data", async () => {
 
   global.fetch.mockRestore();
 });
+
+describe('learning test', () => {
+  test.skip('incomplete test', () => {
+    
+  });
+});
