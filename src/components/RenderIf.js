@@ -1,11 +1,6 @@
 import React from "react";
-import { render } from "react-dom";
 
-/* export default function renderIf() {
-  return ('hi');
- }*/
-
- class RenderIf extends React.Component {
+class RenderIf extends React.Component {
   constructor(props) {
     super(props);
     this.state = { visibility: "hidden" };
@@ -15,9 +10,9 @@ import { render } from "react-dom";
   toggleVisibility() {
     if (this.state.visibility === "hidden") {
       this.setState({
-        visibility: "visible" 
+        visibility: "visible"
       });
-      
+
     } else {
       this.setState({
         visibility: "hidden"
@@ -26,13 +21,14 @@ import { render } from "react-dom";
   }
 
   render() {
-    return(
+    return (
       <>
         <h3>Toggle visibility of paragraph with link follow</h3>
-        <a href="#" onClick={this.toggleVisibility}>Link toggle</a><br />
-        <p style={{visibility:this.state.visibility}}>Paragraph</p>
+        <a href="#example" onClick={this.toggleVisibility}>Link toggle</a><br />
+        <p style={{ visibility: this.state.visibility }}>Paragraph</p>
       </>
-  )}
+    )
+  }
 }
 
- export default RenderIf;
+export default RenderIf;
