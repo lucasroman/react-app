@@ -1,12 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-<<<<<<< HEAD
-import App from './App';
-import Hello from './components/Hello';
-=======
-import App from './components/App';
->>>>>>> d4ff115... Remove default comments
+import RenderIf from './components/RenderIf';
 import reportWebVitals from './reportWebVitals';
 
 // ReactDOM.render(
@@ -18,7 +13,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Hello />
+    <RenderIf />
   </React.StrictMode>,
   document.getElementById('root')
 );
